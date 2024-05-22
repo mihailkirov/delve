@@ -5,9 +5,9 @@ import (
 
 	sys "golang.org/x/sys/unix"
 
-	"github.com/go-delve/delve/pkg/proc"
-	"github.com/go-delve/delve/pkg/proc/amd64util"
-	"github.com/go-delve/delve/pkg/proc/fbsdutil"
+	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mkirov/delve/pkg/proc/amd64util"
+	"github.com/mkirov/delve/pkg/proc/fbsdutil"
 )
 
 type waitStatus sys.WaitStatus

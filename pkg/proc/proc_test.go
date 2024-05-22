@@ -27,16 +27,16 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/go-delve/delve/pkg/dwarf/frame"
-	"github.com/go-delve/delve/pkg/dwarf/op"
-	"github.com/go-delve/delve/pkg/goversion"
-	"github.com/go-delve/delve/pkg/logflags"
-	"github.com/go-delve/delve/pkg/proc"
-	"github.com/go-delve/delve/pkg/proc/core"
-	"github.com/go-delve/delve/pkg/proc/gdbserial"
-	"github.com/go-delve/delve/pkg/proc/native"
-	protest "github.com/go-delve/delve/pkg/proc/test"
-	"github.com/go-delve/delve/service/api"
+	"github.com/mkirov/delve/pkg/dwarf/frame"
+	"github.com/mkirov/delve/pkg/dwarf/op"
+	"github.com/mkirov/delve/pkg/goversion"
+	"github.com/mkirov/delve/pkg/logflags"
+	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mkirov/delve/pkg/proc/core"
+	"github.com/mkirov/delve/pkg/proc/gdbserial"
+	"github.com/mkirov/delve/pkg/proc/native"
+	protest "github.com/mkirov/delve/pkg/proc/test"
+	"github.com/mkirov/delve/service/api"
 )
 
 var normalLoadConfig = proc.LoadConfig{true, 1, 64, 64, -1, 0}
@@ -908,7 +908,7 @@ func TestCGONext(t *testing.T) {
 	}
 	protest.MustHaveCgo(t)
 
-	skipOn(t, "broken - see https://github.com/go-delve/delve/issues/3158", "darwin", "amd64")
+	skipOn(t, "broken - see https://github.com/mkirov/delve/issues/3158", "darwin", "amd64")
 
 	protest.AllowRecording(t)
 	withTestProcess("cgotest", t, func(p *proc.Target, grp *proc.TargetGroup, fixture protest.Fixture) {
@@ -2056,7 +2056,7 @@ func TestIssue414(t *testing.T) {
 			var err error
 			// Stepping through the runtime is not generally safe so after we are out
 			// of main.main just use Next.
-			// See: https://github.com/go-delve/delve/pull/2082
+			// See: https://github.com/mkirov/delve/pull/2082
 			if f == fixture.Source {
 				err = grp.Step()
 			} else {
@@ -5415,7 +5415,7 @@ func TestVariablesWithExternalLinking(t *testing.T) {
 	// Tests that macOSDebugFrameBugWorkaround works.
 	// See:
 	//  https://github.com/golang/go/issues/25841
-	//  https://github.com/go-delve/delve/issues/2346
+	//  https://github.com/mkirov/delve/issues/2346
 	withTestProcessArgs("testvariables2", t, ".", []string{}, protest.BuildModeExternalLinker, func(p *proc.Target, grp *proc.TargetGroup, fixture protest.Fixture) {
 		assertNoError(grp.Continue(), t, "Continue()")
 		str1Var := evalVariable(p, t, "str1")
@@ -5433,7 +5433,7 @@ func TestWatchpointsBasic(t *testing.T) {
 	skipOn(t, "not implemented", "freebsd")
 	skipOn(t, "not implemented", "386")
 	skipOn(t, "not implemented", "ppc64le")
-	skipOn(t, "see https://github.com/go-delve/delve/issues/2768", "windows")
+	skipOn(t, "see https://github.com/mkirov/delve/issues/2768", "windows")
 	protest.AllowRecording(t)
 
 	position1 := []int{18, 19}
@@ -5487,7 +5487,7 @@ func TestWatchpointsBasic(t *testing.T) {
 func TestWatchpointCounts(t *testing.T) {
 	skipOn(t, "not implemented", "freebsd")
 	skipOn(t, "not implemented", "386")
-	skipOn(t, "see https://github.com/go-delve/delve/issues/2768", "windows")
+	skipOn(t, "see https://github.com/mkirov/delve/issues/2768", "windows")
 	skipOn(t, "not implemented", "ppc64le")
 	if _, isTeamCityTest := os.LookupEnv("TEAMCITY_VERSION"); isTeamCityTest {
 		skipOn(t, "CI is running a version of macOS that is too old (11.2)", "darwin", "arm64")
@@ -5607,7 +5607,7 @@ func TestWatchpointStack(t *testing.T) {
 	skipOn(t, "not implemented", "freebsd")
 	skipOn(t, "not implemented", "386")
 	skipOn(t, "not implemented", "ppc64le")
-	skipOn(t, "see https://github.com/go-delve/delve/issues/2768", "windows")
+	skipOn(t, "see https://github.com/mkirov/delve/issues/2768", "windows")
 	if _, isTeamCityTest := os.LookupEnv("TEAMCITY_VERSION"); isTeamCityTest {
 		skipOn(t, "CI is running a version of macOS that is too old (11.2)", "darwin", "arm64")
 	}

@@ -5,9 +5,9 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/go-delve/delve/pkg/dwarf/op"
-	"github.com/go-delve/delve/pkg/proc"
-	"github.com/go-delve/delve/pkg/proc/linutil"
+	"github.com/mkirov/delve/pkg/dwarf/op"
+	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mkirov/delve/pkg/proc/linutil"
 	sys "golang.org/x/sys/unix"
 )
 

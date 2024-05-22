@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/go-delve/delve/pkg/dwarf/frame"
+	"github.com/mkirov/delve/pkg/dwarf/frame"
 
-	"github.com/go-delve/delve/pkg/dwarf/op"
-	"github.com/go-delve/delve/pkg/dwarf/regnum"
+	"github.com/mkirov/delve/pkg/dwarf/op"
+	"github.com/mkirov/delve/pkg/dwarf/regnum"
 )
 
 // This is the unconditional trap, the same mnemonic that both clang and gcc use

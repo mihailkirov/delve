@@ -10,9 +10,9 @@ import (
 
 	"golang.org/x/arch/x86/x86asm"
 
-	"github.com/go-delve/delve/pkg/dwarf/op"
-	"github.com/go-delve/delve/pkg/dwarf/regnum"
-	"github.com/go-delve/delve/pkg/proc"
+	"github.com/mkirov/delve/pkg/dwarf/op"
+	"github.com/mkirov/delve/pkg/dwarf/regnum"
+	"github.com/mkirov/delve/pkg/proc"
 )
 
 // Regs represents CPU registers on an AMD64 processor.

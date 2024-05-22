@@ -3,11 +3,11 @@ package proc_test
 import (
 	"testing"
 
-	"github.com/go-delve/delve/pkg/dwarf/op"
-	"github.com/go-delve/delve/pkg/dwarf/regnum"
-	"github.com/go-delve/delve/pkg/proc"
+	"github.com/mkirov/delve/pkg/dwarf/op"
+	"github.com/mkirov/delve/pkg/dwarf/regnum"
+	"github.com/mkirov/delve/pkg/proc"
 
-	protest "github.com/go-delve/delve/pkg/proc/test"
+	protest "github.com/mkirov/delve/pkg/proc/test"
 )
 
 func TestSetYMMRegister(t *testing.T) {

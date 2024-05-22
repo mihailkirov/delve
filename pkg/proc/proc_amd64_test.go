@@ -6,10 +6,10 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/go-delve/delve/pkg/dwarf/regnum"
-	"github.com/go-delve/delve/pkg/goversion"
-	"github.com/go-delve/delve/pkg/proc"
-	protest "github.com/go-delve/delve/pkg/proc/test"
+	"github.com/mkirov/delve/pkg/dwarf/regnum"
+	"github.com/mkirov/delve/pkg/goversion"
+	"github.com/mkirov/delve/pkg/proc"
+	protest "github.com/mkirov/delve/pkg/proc/test"
 )
 
 func TestStepInstructionOnBreakpoint(t *testing.T) {
@@ -79,7 +79,7 @@ func TestCallInjectionFlagCorruption(t *testing.T) {
 	// Since this problem exists in many versions of Go, instead of fixing
 	// debugCallV2, we work around this problem by restoring FLAGS, one extra
 	// time, after stepping out of debugCallV2.
-	// Fixes issue https://github.com/go-delve/delve/issues/2985
+	// Fixes issue https://github.com/mkirov/delve/issues/2985
 	protest.MustSupportFunctionCalls(t, testBackend)
 
 	withTestProcessArgs("badflags", t, ".", []string{"0"}, 0, func(p *proc.Target, grp *proc.TargetGroup, fixture protest.Fixture) {

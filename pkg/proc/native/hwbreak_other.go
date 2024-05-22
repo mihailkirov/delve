@@ -5,7 +5,7 @@ package native
 import (
 	"errors"
 
-	"github.com/go-delve/delve/pkg/proc"
+	"github.com/mkirov/delve/pkg/proc"
 )
 
 func (t *nativeThread) findHardwareBreakpoint() (*proc.Breakpoint, error) {

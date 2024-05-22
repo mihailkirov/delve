@@ -7,7 +7,7 @@ import (
 	"testing"
 	"unsafe"
 
-	protest "github.com/go-delve/delve/pkg/proc/test"
+	protest "github.com/mkirov/delve/pkg/proc/test"
 )
 
 func ptrSizeByRuntimeArch() int {
@@ -141,20 +141,20 @@ func TestGenericFunctionParser(t *testing.T) {
 	// Normal parsing
 
 	var testCases = []struct{ name, pkg, rcv, base string }{
-		{"github.com/go-delve/delve.afunc", "github.com/go-delve/delve", "", "afunc"},
-		{"github.com/go-delve/delve..afunc", "github.com/go-delve/delve", "", "afunc"}, // malformed
-		{"github.com/go-delve/delve.afunc[some/[thing].el se]", "github.com/go-delve/delve", "", "afunc[some/[thing].el se]"},
-		{"github.com/go-delve/delve.Receiver.afunc", "github.com/go-delve/delve", "Receiver", "afunc"},
-		{"github.com/go-delve/delve.(*Receiver).afunc", "github.com/go-delve/delve", "(*Receiver)", "afunc"},
-		{"github.com/go-delve/delve.Receiver.afunc[some/[thing].el se]", "github.com/go-delve/delve", "Receiver", "afunc[some/[thing].el se]"},       // malformed
-		{"github.com/go-delve/delve.(*Receiver).afunc[some/[thing].el se]", "github.com/go-delve/delve", "(*Receiver)", "afunc[some/[thing].el se]"}, // malformed
-		{"github.com/go-delve/delve.Receiver[some/[thing].el se].afunc", "github.com/go-delve/delve", "Receiver[some/[thing].el se]", "afunc"},
-		{"github.com/go-delve/delve.(*Receiver[some/[thing].el se]).afunc", "github.com/go-delve/delve", "(*Receiver[some/[thing].el se])", "afunc"},
+		{"github.com/mkirov/delve.afunc", "github.com/mkirov/delve", "", "afunc"},
+		{"github.com/mkirov/delve..afunc", "github.com/mkirov/delve", "", "afunc"}, // malformed
+		{"github.com/mkirov/delve.afunc[some/[thing].el se]", "github.com/mkirov/delve", "", "afunc[some/[thing].el se]"},
+		{"github.com/mkirov/delve.Receiver.afunc", "github.com/mkirov/delve", "Receiver", "afunc"},
+		{"github.com/mkirov/delve.(*Receiver).afunc", "github.com/mkirov/delve", "(*Receiver)", "afunc"},
+		{"github.com/mkirov/delve.Receiver.afunc[some/[thing].el se]", "github.com/mkirov/delve", "Receiver", "afunc[some/[thing].el se]"},       // malformed
+		{"github.com/mkirov/delve.(*Receiver).afunc[some/[thing].el se]", "github.com/mkirov/delve", "(*Receiver)", "afunc[some/[thing].el se]"}, // malformed
+		{"github.com/mkirov/delve.Receiver[some/[thing].el se].afunc", "github.com/mkirov/delve", "Receiver[some/[thing].el se]", "afunc"},
+		{"github.com/mkirov/delve.(*Receiver[some/[thing].el se]).afunc", "github.com/mkirov/delve", "(*Receiver[some/[thing].el se])", "afunc"},
 
-		{"github.com/go-delve/delve.afunc[.some/[thing].el se]", "github.com/go-delve/delve", "", "afunc[.some/[thing].el se]"},
-		{"github.com/go-delve/delve.Receiver.afunc[.some/[thing].el se]", "github.com/go-delve/delve", "Receiver", "afunc[.some/[thing].el se]"}, // malformed
-		{"github.com/go-delve/delve.Receiver[.some/[thing].el se].afunc", "github.com/go-delve/delve", "Receiver[.some/[thing].el se]", "afunc"},
-		{"github.com/go-delve/delve.(*Receiver[.some/[thing].el se]).afunc", "github.com/go-delve/delve", "(*Receiver[.some/[thing].el se])", "afunc"},
+		{"github.com/mkirov/delve.afunc[.some/[thing].el se]", "github.com/mkirov/delve", "", "afunc[.some/[thing].el se]"},
+		{"github.com/mkirov/delve.Receiver.afunc[.some/[thing].el se]", "github.com/mkirov/delve", "Receiver", "afunc[.some/[thing].el se]"}, // malformed
+		{"github.com/mkirov/delve.Receiver[.some/[thing].el se].afunc", "github.com/mkirov/delve", "Receiver[.some/[thing].el se]", "afunc"},
+		{"github.com/mkirov/delve.(*Receiver[.some/[thing].el se]).afunc", "github.com/mkirov/delve", "(*Receiver[.some/[thing].el se])", "afunc"},
 	}
 
 	for _, tc := range testCases {

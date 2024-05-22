@@ -10,9 +10,9 @@ import (
 
 	sys "golang.org/x/sys/windows"
 
-	"github.com/go-delve/delve/pkg/logflags"
-	"github.com/go-delve/delve/pkg/proc"
-	"github.com/go-delve/delve/pkg/proc/internal/ebpf"
+	"github.com/mkirov/delve/pkg/logflags"
+	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mkirov/delve/pkg/proc/internal/ebpf"
 )
 
 // osProcessDetails holds Windows specific information.
@@ -191,7 +191,7 @@ func Attach(pid int, waitFor *proc.WaitFor, _ []string) (*proc.TargetGroup, erro
 // See:
 //
 //   - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/debug-privilege
-//   - https://github.com/go-delve/delve/issues/3136
+//   - https://github.com/mkirov/delve/issues/3136
 func acquireDebugPrivilege() error {
 	var token sys.Token
 	err := sys.OpenProcessToken(sys.CurrentProcess(), sys.TOKEN_QUERY|sys.TOKEN_ADJUST_PRIVILEGES, &token)
