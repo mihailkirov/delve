@@ -576,16 +576,17 @@ func funcCallArgs(fn *Function, bi *BinaryInfo, includeRet bool) (argFrameSize i
 	if bi.regabi && fn.cu.optimized {
 		if runtimeWhitelist[fn.Name] {
 			runtimeOptimizedWorkaround(bi, fn.cu.image, dwarfTree)
-		} else {
-			// Debug info for function arguments on optimized functions is currently
-			// too incomplete to attempt injecting calls to arbitrary optimized
-			// functions.
-			// Prior to regabi we could do this because the ABI was simple enough to
-			// manually encode it in Delve.
-			// Runtime.mallocgc is an exception, we specifically patch it's DIE to be
-			// correct for call injection purposes.
-			return 0, nil, fmt.Errorf("can not call optimized function %s when regabi is in use", fn.Name)
 		}
+		// } else {
+		// 	// Debug info for function arguments on optimized functions is currently
+		// 	// too incomplete to attempt injecting calls to arbitrary optimized
+		// 	// functions.
+		// 	// Prior to regabi we could do this because the ABI was simple enough to
+		// 	// manually encode it in Delve.
+		// 	// Runtime.mallocgc is an exception, we specifically patch it's DIE to be
+		// 	// correct for call injection purposes.
+		// 	return 0, nil, fmt.Errorf("can not call optimized function %s when regabi is in use", fn.Name)
+		// }
 	}
 
 	varEntries := reader.Variables(dwarfTree, fn.Entry, int(^uint(0)>>1), reader.VariablesSkipInlinedSubroutines)
