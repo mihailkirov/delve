@@ -3,7 +3,7 @@
 package native
 
 import (
-	"github.com/mkirov/delve/pkg/elfwriter"
+	"github.com/mihailkirov/delve/pkg/elfwriter"
 )
 
 func (p *nativeProcess) DumpProcessNotes(notes []elfwriter.Note, threadDone func()) (threadsDone bool, out []elfwriter.Note, err error) {

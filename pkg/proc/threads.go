@@ -3,7 +3,7 @@ package proc
 import (
 	"errors"
 
-	"github.com/mkirov/delve/pkg/dwarf/op"
+	"github.com/mihailkirov/delve/pkg/dwarf/op"
 )
 
 // Thread represents a thread.

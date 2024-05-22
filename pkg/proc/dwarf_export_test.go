@@ -1,7 +1,7 @@
 package proc
 
 import (
-	"github.com/mkirov/delve/pkg/dwarf/op"
+	"github.com/mihailkirov/delve/pkg/dwarf/op"
 	"golang.org/x/arch/x86/x86asm"
 )
 

@@ -2,7 +2,7 @@ package native
 
 import (
 	"fmt"
-	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc"
 )
 
 func (t *nativeThread) restoreRegisters(savedRegs proc.Registers) error {

@@ -16,7 +16,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/go-delve/delve/pkg/dwarf/op"
+	"github.com/mihailkirov/delve/pkg/dwarf/op"
 )
 
 const (

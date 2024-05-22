@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/mkirov/delve/pkg/dwarf/frame"
-	"github.com/mkirov/delve/pkg/dwarf/op"
-	"github.com/mkirov/delve/pkg/dwarf/regnum"
-	"github.com/mkirov/delve/pkg/goversion"
+	"github.com/mihailkirov/delve/pkg/dwarf/frame"
+	"github.com/mihailkirov/delve/pkg/dwarf/op"
+	"github.com/mihailkirov/delve/pkg/dwarf/regnum"
+	"github.com/mihailkirov/delve/pkg/goversion"
 )
 
 var arm64BreakInstruction = []byte{0x0, 0x0, 0x20, 0xd4}

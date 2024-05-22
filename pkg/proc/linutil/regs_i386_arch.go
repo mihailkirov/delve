@@ -1,8 +1,8 @@
 package linutil
 
 import (
-	"github.com/mkirov/delve/pkg/proc"
-	"github.com/mkirov/delve/pkg/proc/amd64util"
+	"github.com/mihailkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc/amd64util"
 )
 
 // I386Registers implements the proc.Registers interface for the native/linux

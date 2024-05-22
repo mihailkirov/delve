@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/mkirov/delve/pkg/proc"
-	"github.com/mkirov/delve/pkg/proc/amd64util"
-	"github.com/mkirov/delve/pkg/proc/winutil"
+	"github.com/mihailkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc/amd64util"
+	"github.com/mihailkirov/delve/pkg/proc/winutil"
 )
 
 func newContext() *winutil.AMD64CONTEXT {

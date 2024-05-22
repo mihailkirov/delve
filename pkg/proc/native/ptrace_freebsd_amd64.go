@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/mkirov/delve/pkg/proc/amd64util"
+	"github.com/mihailkirov/delve/pkg/proc/amd64util"
 )
 
 var (

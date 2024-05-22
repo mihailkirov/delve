@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mkirov/delve/pkg/proc/internal/ebpf/testhelper"
+	"github.com/mihailkirov/delve/pkg/proc/internal/ebpf/testhelper"
 )
 
 func compareStructTypes(t *testing.T, gostructVal, cstructVal interface{}) {

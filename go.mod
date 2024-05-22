@@ -1,4 +1,4 @@
-module github.com/go-delve/delve
+module github.com/mihailkirov/delve
 
 go 1.21
 

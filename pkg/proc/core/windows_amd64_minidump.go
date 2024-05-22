@@ -1,10 +1,10 @@
 package core
 
 import (
-	"github.com/mkirov/delve/pkg/logflags"
-	"github.com/mkirov/delve/pkg/proc"
-	"github.com/mkirov/delve/pkg/proc/core/minidump"
-	"github.com/mkirov/delve/pkg/proc/winutil"
+	"github.com/mihailkirov/delve/pkg/logflags"
+	"github.com/mihailkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc/core/minidump"
+	"github.com/mihailkirov/delve/pkg/proc/winutil"
 )
 
 func readAMD64Minidump(minidumpPath, exePath string) (*process, proc.Thread, error) {

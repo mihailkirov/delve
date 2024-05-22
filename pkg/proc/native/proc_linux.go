@@ -18,10 +18,10 @@ import (
 
 	sys "golang.org/x/sys/unix"
 
-	"github.com/mkirov/delve/pkg/logflags"
-	"github.com/mkirov/delve/pkg/proc"
-	"github.com/mkirov/delve/pkg/proc/internal/ebpf"
-	"github.com/mkirov/delve/pkg/proc/linutil"
+	"github.com/mihailkirov/delve/pkg/logflags"
+	"github.com/mihailkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc/internal/ebpf"
+	"github.com/mihailkirov/delve/pkg/proc/linutil"
 
 	isatty "github.com/mattn/go-isatty"
 )

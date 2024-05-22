@@ -3,8 +3,8 @@ package ebpf
 import (
 	"reflect"
 
-	"github.com/mkirov/delve/pkg/dwarf/godwarf"
-	"github.com/mkirov/delve/pkg/dwarf/op"
+	"github.com/mihailkirov/delve/pkg/dwarf/godwarf"
+	"github.com/mihailkirov/delve/pkg/dwarf/op"
 )
 
 type UProbeArgMap struct {

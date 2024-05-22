@@ -6,9 +6,9 @@ import (
 
 	sys "golang.org/x/sys/unix"
 
-	"github.com/mkirov/delve/pkg/proc"
-	"github.com/mkirov/delve/pkg/proc/amd64util"
-	"github.com/mkirov/delve/pkg/proc/linutil"
+	"github.com/mihailkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc/amd64util"
+	"github.com/mihailkirov/delve/pkg/proc/linutil"
 )
 
 func (t *nativeThread) restoreRegisters(savedRegs proc.Registers) error {

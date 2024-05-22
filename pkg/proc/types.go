@@ -7,8 +7,8 @@ import (
 	"go/constant"
 	"reflect"
 
-	"github.com/mkirov/delve/pkg/dwarf/godwarf"
-	"github.com/mkirov/delve/pkg/dwarf/reader"
+	"github.com/mihailkirov/delve/pkg/dwarf/godwarf"
+	"github.com/mihailkirov/delve/pkg/dwarf/reader"
 )
 
 // The kind field in runtime._type is a reflect.Kind value plus

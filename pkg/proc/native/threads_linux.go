@@ -5,7 +5,7 @@ import (
 
 	sys "golang.org/x/sys/unix"
 
-	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc"
 )
 
 type waitStatus sys.WaitStatus

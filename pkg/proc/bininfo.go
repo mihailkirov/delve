@@ -22,17 +22,17 @@ import (
 	"sync"
 	"time"
 
-	pdwarf "github.com/mkirov/delve/pkg/dwarf"
-	"github.com/mkirov/delve/pkg/dwarf/frame"
-	"github.com/mkirov/delve/pkg/dwarf/godwarf"
-	"github.com/mkirov/delve/pkg/dwarf/line"
-	"github.com/mkirov/delve/pkg/dwarf/loclist"
-	"github.com/mkirov/delve/pkg/dwarf/op"
-	"github.com/mkirov/delve/pkg/dwarf/reader"
-	"github.com/mkirov/delve/pkg/goversion"
-	"github.com/mkirov/delve/pkg/internal/gosym"
-	"github.com/mkirov/delve/pkg/logflags"
-	"github.com/mkirov/delve/pkg/proc/debuginfod"
+	pdwarf "github.com/mihailkirov/delve/pkg/dwarf"
+	"github.com/mihailkirov/delve/pkg/dwarf/frame"
+	"github.com/mihailkirov/delve/pkg/dwarf/godwarf"
+	"github.com/mihailkirov/delve/pkg/dwarf/line"
+	"github.com/mihailkirov/delve/pkg/dwarf/loclist"
+	"github.com/mihailkirov/delve/pkg/dwarf/op"
+	"github.com/mihailkirov/delve/pkg/dwarf/reader"
+	"github.com/mihailkirov/delve/pkg/goversion"
+	"github.com/mihailkirov/delve/pkg/internal/gosym"
+	"github.com/mihailkirov/delve/pkg/logflags"
+	"github.com/mihailkirov/delve/pkg/proc/debuginfod"
 	"github.com/hashicorp/golang-lru/simplelru"
 )
 
@@ -79,7 +79,7 @@ type BinaryInfo struct {
 
 	// PackageMap maps package names to package paths, needed to lookup types inside DWARF info.
 	// On Go1.12 this mapping is determined by using the last element of a package path, for example:
-	//   github.com/mkirov/delve
+	//   github.com/mihailkirov/delve
 	// will map to 'delve' because it ends in '/delve'.
 	// Starting with Go1.13 debug_info will contain a special attribute
 	// (godwarf.AttrGoPackageName) containing the canonical package name for

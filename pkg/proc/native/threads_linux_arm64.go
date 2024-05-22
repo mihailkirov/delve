@@ -9,8 +9,8 @@ import (
 
 	sys "golang.org/x/sys/unix"
 
-	"github.com/mkirov/delve/pkg/proc"
-	"github.com/mkirov/delve/pkg/proc/linutil"
+	"github.com/mihailkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc/linutil"
 )
 
 func (thread *nativeThread) fpRegisters() ([]proc.Register, []byte, error) {

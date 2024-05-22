@@ -8,9 +8,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/go-delve/delve/service/api"
-	"github.com/go-delve/delve/service/rpc1"
-	"github.com/go-delve/delve/service/rpc2"
+	"github.com/mihailkirov/delve/service/api"
+	"github.com/mihailkirov/delve/service/rpc1"
+	"github.com/mihailkirov/delve/service/rpc2"
 )
 
 func assertNoError(err error, t *testing.T, s string) {

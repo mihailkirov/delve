@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc"
 )
 
 const (

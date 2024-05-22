@@ -5,7 +5,7 @@ import (
 	"debug/macho"
 	"fmt"
 
-	"github.com/mkirov/delve/pkg/internal/gosym"
+	"github.com/mihailkirov/delve/pkg/internal/gosym"
 )
 
 func readPcLnTableElf(exe *elf.File, path string) (*gosym.Table, uint64, error) {

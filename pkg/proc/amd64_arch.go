@@ -8,9 +8,9 @@ import (
 	"math"
 	"strings"
 
-	"github.com/mkirov/delve/pkg/dwarf/frame"
-	"github.com/mkirov/delve/pkg/dwarf/op"
-	"github.com/mkirov/delve/pkg/dwarf/regnum"
+	"github.com/mihailkirov/delve/pkg/dwarf/frame"
+	"github.com/mihailkirov/delve/pkg/dwarf/op"
+	"github.com/mihailkirov/delve/pkg/dwarf/regnum"
 )
 
 var amd64BreakInstruction = []byte{0xCC}

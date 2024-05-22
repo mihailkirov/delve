@@ -13,8 +13,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mkirov/delve/pkg/dwarf/godwarf"
-	"github.com/mkirov/delve/pkg/dwarf/reader"
+	"github.com/mihailkirov/delve/pkg/dwarf/godwarf"
+	"github.com/mihailkirov/delve/pkg/dwarf/reader"
 )
 
 var (

@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc"
 )
 
 // Process represents all of the information the debugger

@@ -8,7 +8,7 @@ import (
 	"path"
 	"runtime"
 
-	"github.com/go-delve/delve/service/api"
+	"github.com/mihailkirov/delve/service/api"
 	"gopkg.in/yaml.v2"
 )
 

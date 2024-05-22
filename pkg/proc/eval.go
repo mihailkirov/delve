@@ -15,12 +15,12 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/mkirov/delve/pkg/dwarf/godwarf"
-	"github.com/mkirov/delve/pkg/dwarf/op"
-	"github.com/mkirov/delve/pkg/dwarf/reader"
-	"github.com/mkirov/delve/pkg/goversion"
-	"github.com/mkirov/delve/pkg/logflags"
-	"github.com/mkirov/delve/pkg/proc/evalop"
+	"github.com/mihailkirov/delve/pkg/dwarf/godwarf"
+	"github.com/mihailkirov/delve/pkg/dwarf/op"
+	"github.com/mihailkirov/delve/pkg/dwarf/reader"
+	"github.com/mihailkirov/delve/pkg/goversion"
+	"github.com/mihailkirov/delve/pkg/logflags"
+	"github.com/mihailkirov/delve/pkg/proc/evalop"
 )
 
 var errOperationOnSpecialFloat = errors.New("operations on non-finite floats not implemented")
@@ -466,7 +466,7 @@ func (scope *EvalScope) Locals(flags localsFlags) ([]*Variable, error) {
 			}
 			v.Name = name[1:]
 			v.Flags |= VariableEscaped
-			// See https://github.com/mkirov/delve/issues/2049 for details
+			// See https://github.com/mihailkirov/delve/issues/2049 for details
 			if locationExpr != nil {
 				locationExpr.isEscaped = true
 				v.LocationExpr = locationExpr

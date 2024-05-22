@@ -9,9 +9,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mkirov/delve/pkg/proc"
-	"github.com/mkirov/delve/pkg/proc/native"
-	protest "github.com/mkirov/delve/pkg/proc/test"
+	"github.com/mihailkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/pkg/proc/native"
+	protest "github.com/mihailkirov/delve/pkg/proc/test"
 )
 
 func mustHaveObjcopy(t *testing.T) {

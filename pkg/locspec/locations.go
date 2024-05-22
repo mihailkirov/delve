@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/go-delve/delve/pkg/proc"
-	"github.com/go-delve/delve/service/api"
+	"github.com/mihailkirov/delve/pkg/proc"
+	"github.com/mihailkirov/delve/service/api"
 )
 
 const maxFindLocationCandidates = 5

@@ -11,14 +11,14 @@ import (
 	"testing"
 	"time"
 
-	protest "github.com/go-delve/delve/pkg/proc/test"
-	"github.com/go-delve/delve/service/debugger"
+	protest "github.com/mihailkirov/delve/pkg/proc/test"
+	"github.com/mihailkirov/delve/service/debugger"
 
-	"github.com/go-delve/delve/pkg/goversion"
-	"github.com/go-delve/delve/service"
-	"github.com/go-delve/delve/service/api"
-	"github.com/go-delve/delve/service/rpc1"
-	"github.com/go-delve/delve/service/rpccommon"
+	"github.com/mihailkirov/delve/pkg/goversion"
+	"github.com/mihailkirov/delve/service"
+	"github.com/mihailkirov/delve/service/api"
+	"github.com/mihailkirov/delve/service/rpc1"
+	"github.com/mihailkirov/delve/service/rpccommon"
 )
 
 func withTestClient1(name string, t *testing.T, fn func(c *rpc1.RPCClient)) {

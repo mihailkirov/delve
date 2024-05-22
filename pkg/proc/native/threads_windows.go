@@ -7,7 +7,7 @@ import (
 	sys "golang.org/x/sys/windows"
 )
 
-const enableHardwareBreakpoints = false // see https://github.com/mkirov/delve/issues/2768
+const enableHardwareBreakpoints = false // see https://github.com/mihailkirov/delve/issues/2768
 
 // waitStatus is a synonym for the platform-specific WaitStatus
 type waitStatus sys.WaitStatus
