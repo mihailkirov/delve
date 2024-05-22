@@ -11,8 +11,8 @@ import (
 	"os"
 	"testing"
 
-	pdwarf "github.com/mkirov/delve/pkg/dwarf"
-	"github.com/mkirov/delve/pkg/dwarf/leb128"
+	pdwarf "github.com/go-delve/delve/pkg/dwarf"
+	"github.com/go-delve/delve/pkg/dwarf/leb128"
 )
 
 func slurpGzip(path string) ([]byte, error) {

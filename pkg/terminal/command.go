@@ -26,12 +26,12 @@ import (
 	"time"
 
 	"github.com/cosiner/argv"
-	"github.com/mkirov/delve/pkg/config"
-	"github.com/mkirov/delve/pkg/locspec"
-	"github.com/mkirov/delve/pkg/proc/debuginfod"
-	"github.com/mkirov/delve/service"
-	"github.com/mkirov/delve/service/api"
-	"github.com/mkirov/delve/service/rpc2"
+	"github.com/go-delve/delve/pkg/config"
+	"github.com/go-delve/delve/pkg/locspec"
+	"github.com/go-delve/delve/pkg/proc/debuginfod"
+	"github.com/go-delve/delve/service"
+	"github.com/go-delve/delve/service/api"
+	"github.com/go-delve/delve/service/rpc2"
 )
 
 const optimizedFunctionWarning = "Warning: debugging optimized function"

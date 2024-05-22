@@ -4,7 +4,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/mkirov/delve/pkg/logflags"
+	"github.com/go-delve/delve/pkg/logflags"
 )
 
 // DefaultDebugBinaryPath returns an unused file path in the current

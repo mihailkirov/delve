@@ -9,7 +9,7 @@ import (
 
 	"sync"
 
-	"github.com/mkirov/delve/service/api"
+	"github.com/go-delve/delve/service/api"
 )
 
 // RPCClient is a RPC service.Client.

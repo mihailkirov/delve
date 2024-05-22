@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/mkirov/liner"
+	"github.com/go-delve/liner"
 )
 
 func main() {

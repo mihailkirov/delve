@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/mkirov/delve/_fixtures/internal/pluginsupport"
+	"github.com/go-delve/delve/_fixtures/internal/pluginsupport"
 	"os"
 	"plugin"
 )

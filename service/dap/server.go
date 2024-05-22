@@ -32,16 +32,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mkirov/delve/pkg/gobuild"
-	"github.com/mkirov/delve/pkg/goversion"
-	"github.com/mkirov/delve/pkg/locspec"
-	"github.com/mkirov/delve/pkg/logflags"
-	"github.com/mkirov/delve/pkg/proc"
+	"github.com/go-delve/delve/pkg/gobuild"
+	"github.com/go-delve/delve/pkg/goversion"
+	"github.com/go-delve/delve/pkg/locspec"
+	"github.com/go-delve/delve/pkg/logflags"
+	"github.com/go-delve/delve/pkg/proc"
 
-	"github.com/mkirov/delve/service"
-	"github.com/mkirov/delve/service/api"
-	"github.com/mkirov/delve/service/debugger"
-	"github.com/mkirov/delve/service/internal/sameuser"
+	"github.com/go-delve/delve/service"
+	"github.com/go-delve/delve/service/api"
+	"github.com/go-delve/delve/service/debugger"
+	"github.com/go-delve/delve/service/internal/sameuser"
 	"github.com/google/go-dap"
 )
 
@@ -760,7 +760,7 @@ func (s *Session) handleRequest(request dap.Message) {
 		s.onDisassembleRequest(request)
 	//--- Requests that we may want to support ---
 	case *dap.SourceRequest: // Required
-		/*TODO*/ s.sendUnsupportedErrorResponse(request.Request) // https://github.com/mkirov/delve/issues/2851
+		/*TODO*/ s.sendUnsupportedErrorResponse(request.Request) // https://github.com/go-delve/delve/issues/2851
 	case *dap.SetExpressionRequest: // Optional (capability 'supportsSetExpression')
 		/*TODO*/ s.onSetExpressionRequest(request) // Not yet implemented
 	case *dap.LoadedSourcesRequest: // Optional (capability 'supportsLoadedSourcesRequest')
@@ -2653,7 +2653,7 @@ func (s *Session) convertVariableWithOpts(v *proc.Variable, qualifiedNameOrExpr 
 	reloadVariable := func(v *proc.Variable, qualifiedNameOrExpr string) (value string) {
 		// We might be loading variables from the frame that's not topmost, so use
 		// frame-independent address-based expression, not fully-qualified name as per
-		// https://github.com/mkirov/delve/blob/master/Documentation/api/ClientHowto.md#looking-into-variables.
+		// https://github.com/go-delve/delve/blob/master/Documentation/api/ClientHowto.md#looking-into-variables.
 		// TODO(polina): Get *proc.Variable object from debugger instead. Export a function to set v.loaded to false
 		// and call v.loadValue gain with a different load config. It's more efficient, and it's guaranteed to keep
 		// working with generics.
@@ -3582,7 +3582,7 @@ func newEvent(event string) *dap.Event {
 }
 
 const BetterBadAccessError = `invalid memory address or nil pointer dereference [signal SIGSEGV: segmentation violation]
-Unable to propagate EXC_BAD_ACCESS signal to target process and panic (see https://github.com/mkirov/delve/issues/852)`
+Unable to propagate EXC_BAD_ACCESS signal to target process and panic (see https://github.com/go-delve/delve/issues/852)`
 
 const BetterNextWhileNextingError = `Unable to step while the previous step is interrupted by a breakpoint.
 Use 'Continue' to resume the original step command.`

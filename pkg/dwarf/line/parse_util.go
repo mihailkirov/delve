@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/mkirov/delve/pkg/dwarf"
-	"github.com/mkirov/delve/pkg/dwarf/leb128"
+	"github.com/go-delve/delve/pkg/dwarf"
+	"github.com/go-delve/delve/pkg/dwarf/leb128"
 )
 
 const (

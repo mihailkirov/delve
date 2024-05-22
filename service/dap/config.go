@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mkirov/delve/pkg/config"
+	"github.com/go-delve/delve/pkg/config"
 )
 
 func listConfig(args *launchAttachArgs) string {
