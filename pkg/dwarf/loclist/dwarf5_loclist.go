@@ -5,9 +5,9 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/go-delve/delve/pkg/dwarf"
-	"github.com/go-delve/delve/pkg/dwarf/godwarf"
-	"github.com/go-delve/delve/pkg/dwarf/leb128"
+	"github.com/mkirov/delve/pkg/dwarf"
+	"github.com/mkirov/delve/pkg/dwarf/godwarf"
+	"github.com/mkirov/delve/pkg/dwarf/leb128"
 )
 
 // Dwarf5Reader parses and presents DWARF loclist information for DWARF version 5 and later.

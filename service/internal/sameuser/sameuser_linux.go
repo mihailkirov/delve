@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/go-delve/delve/pkg/logflags"
+	"github.com/mkirov/delve/pkg/logflags"
 )
 
 // for testing

@@ -9,7 +9,7 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/go-delve/delve/pkg/goversion"
+	"github.com/mkirov/delve/pkg/goversion"
 )
 
 type arguments struct {

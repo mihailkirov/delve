@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/go-delve/delve/pkg/dwarf"
+	"github.com/mkirov/delve/pkg/dwarf"
 )
 
 func TestReadString(t *testing.T) {

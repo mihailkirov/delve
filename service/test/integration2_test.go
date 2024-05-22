@@ -17,16 +17,16 @@ import (
 	"testing"
 	"time"
 
-	protest "github.com/go-delve/delve/pkg/proc/test"
-	"github.com/go-delve/delve/service/debugger"
+	protest "github.com/mkirov/delve/pkg/proc/test"
+	"github.com/mkirov/delve/service/debugger"
 
-	"github.com/go-delve/delve/pkg/goversion"
-	"github.com/go-delve/delve/pkg/logflags"
-	"github.com/go-delve/delve/pkg/proc"
-	"github.com/go-delve/delve/service"
-	"github.com/go-delve/delve/service/api"
-	"github.com/go-delve/delve/service/rpc2"
-	"github.com/go-delve/delve/service/rpccommon"
+	"github.com/mkirov/delve/pkg/goversion"
+	"github.com/mkirov/delve/pkg/logflags"
+	"github.com/mkirov/delve/pkg/proc"
+	"github.com/mkirov/delve/service"
+	"github.com/mkirov/delve/service/api"
+	"github.com/mkirov/delve/service/rpc2"
+	"github.com/mkirov/delve/service/rpccommon"
 )
 
 var normalLoadConfig = api.LoadConfig{
@@ -1060,7 +1060,7 @@ func TestClientServer_FindLocations(t *testing.T) {
 
 	if goversion.VersionAfterOrEqual(runtime.Version(), 1, 13) {
 		withTestClient2("pkgrenames", t, func(c service.Client) {
-			someFuncLoc := findLocationHelper(t, c, "github.com/go-delve/delve/_fixtures/internal/dir%2eio.SomeFunction:0", false, 1, 0)[0]
+			someFuncLoc := findLocationHelper(t, c, "github.com/mkirov/delve/_fixtures/internal/dir%2eio.SomeFunction:0", false, 1, 0)[0]
 			findLocationHelper(t, c, "dirio.SomeFunction:0", false, 1, someFuncLoc)
 		})
 	}
@@ -2460,7 +2460,7 @@ func TestIssue2162(t *testing.T) {
 }
 
 func TestDetachLeaveRunning(t *testing.T) {
-	// See https://github.com/go-delve/delve/issues/2259
+	// See https://github.com/mkirov/delve/issues/2259
 	if testBackend == "rr" {
 		return
 	}
@@ -2880,7 +2880,7 @@ func TestPluginSuspendedBreakpoint(t *testing.T) {
 	assertNoError(err, t, "filepath.Abs")
 
 	withTestClient2Extended("plugintest", t, protest.AllNonOptimized, [3]string{}, []string{pluginFixtures[0].Path, pluginFixtures[1].Path}, func(c service.Client, f protest.Fixture) {
-		_, err := c.CreateBreakpointWithExpr(&api.Breakpoint{FunctionName: "github.com/go-delve/delve/_fixtures/plugin1.Fn1", Line: 1}, "", nil, true)
+		_, err := c.CreateBreakpointWithExpr(&api.Breakpoint{FunctionName: "github.com/mkirov/delve/_fixtures/plugin1.Fn1", Line: 1}, "", nil, true)
 		assertNoError(err, t, "CreateBreakpointWithExpr(Fn1) (suspended)")
 
 		_, err = c.CreateBreakpointWithExpr(&api.Breakpoint{File: filepath.Join(dir, "plugin2", "plugin2.go"), Line: 9}, "", nil, true)

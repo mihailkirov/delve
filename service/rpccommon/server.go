@@ -16,15 +16,15 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/go-delve/delve/pkg/logflags"
-	"github.com/go-delve/delve/pkg/version"
-	"github.com/go-delve/delve/service"
-	"github.com/go-delve/delve/service/api"
-	"github.com/go-delve/delve/service/dap"
-	"github.com/go-delve/delve/service/debugger"
-	"github.com/go-delve/delve/service/internal/sameuser"
-	"github.com/go-delve/delve/service/rpc1"
-	"github.com/go-delve/delve/service/rpc2"
+	"github.com/mkirov/delve/pkg/logflags"
+	"github.com/mkirov/delve/pkg/version"
+	"github.com/mkirov/delve/service"
+	"github.com/mkirov/delve/service/api"
+	"github.com/mkirov/delve/service/dap"
+	"github.com/mkirov/delve/service/debugger"
+	"github.com/mkirov/delve/service/internal/sameuser"
+	"github.com/mkirov/delve/service/rpc1"
+	"github.com/mkirov/delve/service/rpc2"
 )
 
 // ServerImpl implements a JSON-RPC server that can switch between two
